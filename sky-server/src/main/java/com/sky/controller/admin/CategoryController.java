@@ -30,4 +30,11 @@ public class CategoryController {
         PageResult pageResult = categoryService.pageQuery(categoryPageQueryDTO);
         return Result.success(pageResult);
     }
+
+    @DeleteMapping
+    public Result delete(Integer id){
+        log.info("删除分类");
+        categoryService.deleteById(id);
+        return Result.success();
+    }
 }

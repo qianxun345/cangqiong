@@ -41,4 +41,9 @@ public class CategoryServiceImpl implements CategoryService {
         Page<Category> page = categoryMapper.pageQuery((categoryPageQueryDTO));
         return new PageResult(page.getTotal(), page.getResult());
     }
+
+    @Override
+    public void deleteById(Integer id) {
+        categoryMapper.deleteById(id);
+    }
 }
