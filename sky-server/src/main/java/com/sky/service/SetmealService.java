@@ -48,4 +48,6 @@ public interface SetmealService {
     PageResult pageQuery(SetmealPageQueryDTO setmealPageQueryDTO);
 
     void startOrStop(Integer status, Long id);
+
+    void deleteBatch(List<Long> ids);
 }
